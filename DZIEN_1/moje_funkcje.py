@@ -32,3 +32,17 @@ print(nbparzyste)
 #utwórz nową listę cube i przekaż do niej elementy list num podmniesione do potęgi trzeciej
 cube = list(map(lambda x:x**3,num))
 print(cube)
+
+#funkcje wyższego rzędu
+from bfunkcje import konkurs,bonus
+
+def witaj(imie):
+    return f"Miło Cię widzieć {imie}"
+
+def osoba(funkcja,*args):
+    return funkcja(*args)
+
+print(osoba(witaj,"Olaf"))
+print(osoba(konkurs,"Alicja",67,13))
+print(osoba(bonus,67,20))
+print(osoba(bonus,33,20))
